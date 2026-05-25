@@ -9,7 +9,7 @@ body {
 h1 {
     text-align: center;
     padding: 20px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     margin: 0;
 }
 
@@ -35,7 +35,8 @@ a:hover {
 }
 
 /* CONTENT */
-h2, h3 {
+h2,
+h3 {
     text-align: center;
 }
 
@@ -54,23 +55,51 @@ th {
     color: white;
 }
 
-td, th {
+td,
+th {
     padding: 10px;
     text-align: center;
 }
 
-/* BUTTON */
+/* BUTTON UMUM */
 button {
-    background: #a94444;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 18px;
     color: white;
     border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-button:hover {
-    background: #7a1f1f;
+/* BUTTON TAMBAH */
+.btn-tambah {
+    background-color: #28a745;
+}
+
+.btn-tambah:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+}
+
+/* BUTTON EDIT */
+.btn-edit {
+    background-color: #007bff;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* BUTTON DELETE */
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #a71d2a;
+    transform: scale(1.05);
 }
 
 /* FORM */
@@ -83,10 +112,14 @@ form {
     border-radius: 10px;
 }
 
+/* INPUT */
 input {
     width: 100%;
     padding: 5px;
 }
-table, form {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+/* SHADOW */
+table,
+form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

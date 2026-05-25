@@ -12,10 +12,10 @@
     <hr>
     <table border="1" cellspacing="0" cellpadding="10px">
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="profile.html">Profile</a></td>
-            <td><a href="contact.html">Contact</a></td>
-            <td><a href="mahasiswa.html">Data Mahasiswa</td>
+            <td><a href="index.php">Home</a></td>
+            <td><a href="profile.php">Profile</a></td>
+            <td><a href="contact.php">Contact</a></td>
+            <td><a href="mahasiswa.php">Data Mahasiswa</td>
         </tr>
     </table>
     <h2>Sambutan Kaprodi</h2>

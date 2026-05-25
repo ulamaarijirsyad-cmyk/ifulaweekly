@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Mahasiswa</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>WEB INFORMATIKA</h1>
     <hr>
     <table border="1" cellspacing="0" cellpadding="10px">
         <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="profile.html">Profile</a></td>
-            <td><a href="contact.html">Contact</a></td>
-            <td><a href="mahasiswa.html">Data Mahasiswa</td>
+            <td><a href="index.php">Home</a></td>
+            <td><a href="profile.php">Profile</a></td>
+            <td><a href="contact.php">Contact</a></td>
+            <td><a href="mahasiswa.php">Data Mahasiswa</td>
         </tr>
     </table>
     <h2>Data Mahasiswa</h2>
-    <a href="inputdata.html">
-        <button>Tambah Data</button>
+    <a href="inputdata.php">
+        <button class="btn-tambah">Tambah Data</button>
     </a>
     <table border="1" cellpadding="5px">
         <tr>
-            <th rowspan="2">No</th>
-            <th rowspan="2">Nama</th>
-            <th rowspan="2">NIM</th>
-            <th rowspan="2">Foto</th>
-            <th colspan="3">Nilai</th>
-        </tr>
-        <tr>
-            <th>UTS</th>
-            <th>UAS</th>
-            <th>Tugas</th>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Jurusan</th>
+            <th>email</th>
+            <th>No. HP</th>
+            <th>Foto</th>
+            <th>Aksi</th>
         </tr>
         <tr>
             <td align="center">1</td>
-            <td>Gw Keren Banget</td>
-            <td>11133367676767</td>
-            <td><img src="assets/images/Foto.webp" width="70px"></td>
-            <td align="center">100</td>
-            <td align=" center">100</td>
-            <td align="center">100</td>
+            <td>Ula Ma'arij Irsyad</td>
+            <td>13182420013</td>
+            <td>S1 Informatika</td>
+            <td align="center">ulamaarijirsyad@gmail.com</td>
+            <td align="center">0821002435432</td>
+            <td align="center">
+                <img src="assets/images/Windah-basudara.jpg" width="70px">
+            <td>
+                <button class="btn-edit">EDIT</button>
+                <button class="btn-delete">DELETE</button>
+            </td>
         </tr>
     </table>
     <table border="1" cellspacing="0" cellpadding="10px">
@@ -68,4 +73,5 @@
         </tr>
     </table>
 </body>
+
 </html>
