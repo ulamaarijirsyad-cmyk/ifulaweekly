@@ -1,3 +1,36 @@
+<?php
+
+    $koneksi = mysqli_connect("localhost", "root", "", "ifulaweekly");
+   
+    //if($koneksi)
+    //{
+    //  echo "Berhasil Konek";
+    //}
+
+    $query = "SELECT * FROM mahasiswa";
+
+    /// ambil data (fetch) mahasiswa dari lemari result
+
+    /// mysqli_fetch_row array num
+    /// mysqli_fetch_assoc array asosiatif
+    // mysqli_fetch_object -> object data
+    // mysqli_fetch_array 
+
+    $result = mysqli_query($koneksi, $query);
+
+    //while ($mhs = mysqli_fetch_assoc($result));
+    //{
+      //  var_dump($mhs);
+    //}
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,20 +67,30 @@
             <th>Foto</th>
             <th>Aksi</th>
         </tr>
+        <?php
+            $i = 1;     
+            while ($mhs = mysqli_fetch_assoc($result))
+                {
+        ?>
         <tr>
             <td align="center">1</td>
-            <td>Ula Ma'arij Irsyad</td>
-            <td>13182420013</td>
-            <td>S1 Informatika</td>
-            <td align="center">ulamaarijirsyad@gmail.com</td>
-            <td align="center">0821002435432</td>
+            <td><?php echo $mhs ["nama"]?></td>
+            <td><?php echo $mhs["nim"]?></td>
+            <td><?php echo $mhs["jurusan"]?></td>
+            <td align="center"><?php echo $mhs["email"]?></td>
+            <td align="center"><?php echo $mhs["no_hp"]?></td>
             <td align="center">
-                <img src="assets/images/Windah-basudara.jpg" width="70px">
+                <img src="assets/images/<?php echo $mhs["foto"]?>
             <td>
                 <button class="btn-edit">EDIT</button>
                 <button class="btn-delete">DELETE</button>
             </td>
         </tr>
+        <?php
+            $i++;
+            }
+        
+        ?>
     </table>
     <table border="1" cellspacing="0" cellpadding="10px">
         <tr>
