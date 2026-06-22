@@ -1,13 +1,13 @@
 <?php
 
-    $koneksi = mysqli_connect("localhost", "root", "", "ifulaweekly");
+   // $koneksi = mysqli_connect("localhost", "root", "", "ifulaweekly");
    
     //if($koneksi)
     //{
     //  echo "Berhasil Konek";
     //}
 
-    $query = "SELECT * FROM mahasiswa";
+    
 
     /// ambil data (fetch) mahasiswa dari lemari result
 
@@ -16,16 +16,20 @@
     // mysqli_fetch_object -> object data
     // mysqli_fetch_array 
 
-    $result = mysqli_query($koneksi, $query);
+   /// 
 
     //while ($mhs = mysqli_fetch_assoc($result));
     //{
       //  var_dump($mhs);
     //}
+    require 'fungsi.php';
+    $qmahasiswa = "SELECT * FROM mahasiswa";
+    $mahasiswas = tampildata ($qmahasiswa);
 
-
+    
 
 ?>
+
 
 
 
@@ -68,19 +72,20 @@
             <th>Aksi</th>
         </tr>
         <?php
-            $i = 1;     
-            while ($mhs = mysqli_fetch_assoc($result))
-                {
+            $i = 1;
+
+            foreach ($mahasiswas as $mhs)
+            {
         ?>
         <tr>
-            <td align="center">1</td>
+            <td align="center"><? $i ?></td>
             <td><?php echo $mhs ["nama"]?></td>
             <td><?php echo $mhs["nim"]?></td>
             <td><?php echo $mhs["jurusan"]?></td>
             <td align="center"><?php echo $mhs["email"]?></td>
             <td align="center"><?php echo $mhs["no_hp"]?></td>
-            <td align="center">
-                <img src="assets/images/<?php echo $mhs["foto"]?>
+            <td align="center"><img src="assets/images/<?=  $mhs["foto"]?>" width="70px" /></td>
+                
             <td>
                 <button class="btn-edit">EDIT</button>
                 <button class="btn-delete">DELETE</button>
