@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Jika tidak ada session login, tendang user kembali ke halaman login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+
+// Kode halaman utama Anda dimulai di bawah ini...
+?>
+</h3>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +29,8 @@
             <td><a href="profile.php">Profile</a></td>
             <td><a href="contact.php">Contact</a></td>
             <td><a href="mahasiswa.php">Data Mahasiswa</td>
+            <td><a href="login.php">Login</a></td>
+            <td><a href="logout.php">Logout</a></td>
         </tr>
     </table>
     <h2>Sambutan Kaprodi</h2>
